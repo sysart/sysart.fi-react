@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import DocumentMeta from 'react-document-meta';
+import { Provider } from 'react-redux';
+import configureStore from 'store/configureStore';
 
 /* components */
 import { TopImage } from 'components/TopImage';
 import { Tools } from 'components/Tools';
 import { Projects } from 'components/Projects';
+import { Posts } from 'components/Posts';
 
 const metaData = {
   title: 'Redux Easy Boilerplate',
@@ -18,6 +21,8 @@ const metaData = {
   },
 };
 
+const store = configureStore();
+
 export class Home extends Component {
   render() {
     return (
@@ -25,6 +30,9 @@ export class Home extends Component {
         <DocumentMeta {...metaData} />
         <TopImage />
         <Projects />
+        <Provider store={store}>
+            <Posts />
+        </Provider>
       </section>
     );
   }
