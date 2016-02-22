@@ -1,27 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import { fetchPosts } from 'actions/posts';
 
-
+@connect((state, props) => {
+    return {};
+})
 export class Posts extends Component {
-    constructor(props){
-        super(props)
-        this.fetchPosts = this.fetchPosts.bind(this);
-    }
-
-    componentDidMount() {
-        console.log('tissi: ',this);
-    }
-
-    fetchPosts() {
-        let postType = 'test';
-
-        const { dispatch } = this.props;
-        dispatch(fetchPosts(postType));
+    testi() {
+        this.props.dispatch(fetchPosts('test'));
     }
 
     render() {
         return (
-            <button onClick={this.fetchPosts()}></button>
-        )
+            <button onClick={this.testi.bind(this)}>PÖÖP</button>
+        );
     }
 }
