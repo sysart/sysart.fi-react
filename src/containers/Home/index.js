@@ -30,9 +30,7 @@ export class Home extends Component {
         <DocumentMeta {...metaData} />
         <TopImage />
         <Projects />
-        <Provider store={store}>
-            <Posts />
-        </Provider>
+        <Posts />
       </section>
     );
   }
