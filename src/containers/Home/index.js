@@ -8,7 +8,8 @@ import { TopImage } from 'components/TopImage';
 import { Tools } from 'components/Tools';
 import { Projects } from 'components/Projects';
 import { Posts } from 'components/Posts';
-import { Services } from 'components/Services'
+import { Services } from 'components/Services';
+import { Customers } from 'components/Customers';
 
 const metaData = {
   title: 'Redux Easy Boilerplate',
@@ -32,6 +33,7 @@ export class Home extends Component {
         <TopImage />
         <Services />
         <Posts />
+        <Customers />
       </section>
     );
   }

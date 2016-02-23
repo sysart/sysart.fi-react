@@ -5,6 +5,7 @@ import { reducer as formReducer } from 'redux-form';
 import { items } from './items';
 import { posts } from './posts';
 import { services } from './services';
+import { customers } from './customers';
 
 const rootReducer = combineReducers({
   form: formReducer,
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
   /* your reducers */
   posts,
   items,
-  services
+  services,
+  customers
 });
 
 export default rootReducer;
