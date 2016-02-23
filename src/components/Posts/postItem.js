@@ -8,14 +8,21 @@ export default class PostItem extends Component {
     }
 
     render() {
-        const { post_title, post_excerpt, featured_image, post_date } = this.props.item;
+        const { post_title, post_excerpt, featured_image, post_date, post_categories } = this.props.item;
         console.log('PostItem', this.props);
 
         let postImage = '';
+        let categories = '';
         if(featured_image){
             postImage = (
                 <img src={featured_image} />
             )
+        }
+
+        if(post_categories) {
+            post_categories.map((cat) => {
+                categories += cat.name + ' ';
+            })
         }
 
         // Publish time
@@ -23,14 +30,20 @@ export default class PostItem extends Component {
 
         return (
             <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center">
-                <div>
-                    {published}
+                <p className="published">
+                    {published} - {categories}
+                </p>
+                <div className="image-wrapper">
+                    {postImage}
                 </div>
-                {postImage}
                 <h4>
                     {post_title}
                 </h4>
-                <div dangerouslySetInnerHTML={{__html: post_excerpt}} />
+                <div>
+                    <p className="excerpt">
+                        {post_excerpt}
+                    </p>
+                </div>
             </div>
         )
     }

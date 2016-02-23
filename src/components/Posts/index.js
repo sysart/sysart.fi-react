@@ -5,6 +5,8 @@ import { bindActionCreators } from 'redux';
 import * as actionCreators from 'actions/posts';
 
 import PostItem from './postItem';
+import { styles } from './styles.scss';
+
 
 @connect(
   state => state.posts,
@@ -27,8 +29,11 @@ export class Posts extends Component {
         const { items } = this.props;
         return (
 
-            <section>
+            <section className={`${styles}`}>
               <div className="container">
+                <div className="row">
+                    <h1>What's up?</h1>
+                </div>
                 <div className="row">
                     {items.map((postItem, index) => <PostItem key={index} item={postItem} />)}
                 </div>

@@ -6,6 +6,8 @@ import * as actionCreators from 'actions/services';
 
 import { ServiceItem } from './serviceItem';
 
+import { styles } from './styles.scss';
+
 @connect(
   state => state.services,
   dispatch => bindActionCreators(actionCreators, dispatch)
@@ -30,7 +32,7 @@ export class Services extends Component {
         if(items){
             return (
 
-                <section>
+                <section className={`${styles}`}>
                   <div className="container">
                     <div className="row">
                         {items.map((item, index) => <ServiceItem key={index} item={item} />)}

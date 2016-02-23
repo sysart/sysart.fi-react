@@ -13,13 +13,13 @@ export class Header extends Component {
       <header className={`${styles}`}>
         <div className="container">
           <div className="row">
-            <div className="col-xs-5 col-sm-3 col-md-3 col-lg-3 logo">
+            <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 logo">
               <Link to="/">
                 <img src={sysartLogo} />
               </Link>
             </div>
 
-            <div className="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+            <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9">
               <nav>
                 <Link to="/home" activeClassName="active">
                   Palvelut

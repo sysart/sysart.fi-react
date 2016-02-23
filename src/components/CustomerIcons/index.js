@@ -5,6 +5,8 @@ import { bindActionCreators } from 'redux';
 import * as actionCreators from 'actions/customers';
 
 import { CustomerLogo } from './customerLogo';
+import { styles } from './styles.scss';
+
 
 @connect(
   state => state.customers.frontpage,
@@ -30,10 +32,10 @@ export class CustomerIcons extends Component {
         if(items){
             return (
 
-                <section>
+                <section className={`${styles}`}>
                   <div className="container">
                     <div className="row">
-                        Asiakkaat
+                        <h1>Asiakkaat</h1>
                     </div>
                     <div className="row">
 

@@ -1,0 +1,22 @@
+:local(.styles) {
+    .published {
+        text-align: left;
+    }
+
+    .image-wrapper {
+        height: 250px;
+    }
+
+    .excerpt {
+        text-align: left;
+        color: #4a4a4a;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        margin: 100px auto;
+        color: #4a4a4a;
+    }
+}

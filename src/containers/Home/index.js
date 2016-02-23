@@ -11,6 +11,8 @@ import { Posts } from 'components/Posts';
 import { Services } from 'components/Services';
 import { CustomerIcons } from 'components/CustomerIcons';
 
+import './styles/home.scss';
+
 const metaData = {
   title: 'Redux Easy Boilerplate',
   description: 'Start you project easy and fast with modern tools',

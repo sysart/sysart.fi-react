@@ -15,13 +15,11 @@ export class ServiceItem extends Component {
 
         return (
             <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center">
-
-                <h4>
-                    {title}
-                </h4>
-                <img src={image} />
+                <div className="image-wrapper">
+                    <img src={image} />
+                </div>
+                <h4>{title}</h4>
                 <div dangerouslySetInnerHTML={{__html: description}} />
-
             </div>
         )
     }
