@@ -24,7 +24,7 @@ export class Header extends Component {
                 <Link to="/home" activeClassName="active">
                   Palvelut
                 </Link>
-                <Link to="/list" activeClassName="active">
+                <Link to="/asiakkaat" activeClassName="active">
                   Asiakkaat
                 </Link>
                 <Link to="/list" activeClassName="active">

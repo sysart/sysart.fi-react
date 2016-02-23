@@ -1,5 +1,11 @@
 const INITIAL_STATE = {
-    items : []
+    frontpage: {
+        items : []
+    },
+    listpage: {
+        items: []
+    }
+
 }
 
 export function customers(state = INITIAL_STATE, action) {
@@ -13,9 +19,21 @@ export function customers(state = INITIAL_STATE, action) {
             console.log(state, action);
             return Object.assign({}, state, {
                 isFetching: false,
-                items: [
-                    ...action.items.customers
-                ]
+                frontpage: {
+                    items: [
+                        ...action.items.customers
+                    ]
+                }
+            })
+
+        case 'RECEIVE_CUSTOMERS_PAGE':
+            return Object.assign({}, state, {
+                isFetching: false,
+                listpage: {
+                    items: [
+                        ...action.items.customers
+                    ]
+                }
             })
         default:
             return state;

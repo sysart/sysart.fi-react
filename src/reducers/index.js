@@ -7,6 +7,8 @@ import { posts } from './posts';
 import { services } from './services';
 import { customers } from './customers';
 
+
+
 const rootReducer = combineReducers({
   form: formReducer,
   routing: routeReducer,

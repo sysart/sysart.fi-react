@@ -7,10 +7,10 @@ import * as actionCreators from 'actions/customers';
 import { CustomerLogo } from './customerLogo';
 
 @connect(
-  state => state.customers,
+  state => state.customers.frontpage,
   dispatch => bindActionCreators(actionCreators, dispatch)
 )
-export class Customers extends Component {
+export class CustomerIcons extends Component {
 
     constructor(props, context){
         super(props, context);

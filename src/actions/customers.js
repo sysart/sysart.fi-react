@@ -32,3 +32,23 @@ export function receiveCustomers(postType, json) {
         items: json
     }
 }
+
+// Get customers page 
+export function fetchCustomersPage(postType) {
+    return dispatch => {
+
+        return fetch('http://185.26.50.90/wp-json/sysart-extend/v1/customers-list')
+            .then(response => response.json())
+            .then(json => dispatch(receiveCustomersPage(postType, json)))
+    }
+}
+
+export const RECEIVE_CUSTOMERS_PAGE = 'RECEIVE_CUSTOMERS_PAGE';
+export function receiveCustomersPage(postType, json) {
+
+    return {
+        type: RECEIVE_CUSTOMERS_PAGE,
+        postType,
+        items: json
+    }
+}
