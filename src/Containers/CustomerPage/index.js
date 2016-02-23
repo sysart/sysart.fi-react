@@ -6,10 +6,7 @@ import configureStore from 'store/configureStore';
 /* components */
 import { TopImage } from 'components/TopImage';
 
-import { Projects } from 'components/Projects';
-import { Posts } from 'components/Posts';
-import { Services } from 'components/Services';
-import { CustomerIcons } from 'components/CustomerIcons';
+import { CustomersPage } from 'components/CustomersPage';
 
 const metaData = {
   title: 'Redux Easy Boilerplate',
@@ -25,17 +22,14 @@ const metaData = {
 
 const store = configureStore();
 
-export class Home extends Component {
-
+export class CustomerPage extends Component {
   render() {
-      console.log('render home', this);
+      console.log('render customers ', this);
     return (
       <section>
         <DocumentMeta {...metaData} />
         <TopImage />
-        <Services />
-        <Posts />
-        <CustomerIcons />
+        <CustomersPage />
       </section>
     );
   }

@@ -23,6 +23,7 @@ const store = configureStore();
 
 export class Customers extends Component {
   render() {
+      console.log('render customers ', this);
     return (
       <section>
         <DocumentMeta {...metaData} />
