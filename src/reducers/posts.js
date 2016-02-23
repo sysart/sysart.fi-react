@@ -14,7 +14,7 @@ export function posts(state = INITIAL_STATE, action) {
             return Object.assign({}, state, {
                 isFetching: false,
                 items: [
-                    ...action.items
+                    ...action.items.posts
                 ]
             })
         default:

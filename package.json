@@ -100,6 +100,7 @@
     "babel-preset-react-hmre": "^1.0.1",
     "isomorphic-fetch": "^2.2.1",
     "jquery": "^2.2.0",
+    "moment": "^2.11.2",
     "q": "^1.4.1",
     "react": "^0.14.2",
     "react-redux": "^4.0.0",
