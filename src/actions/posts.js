@@ -1,5 +1,4 @@
 import fetch from 'isomorphic-fetch';
-import Q from 'q';
 
 export const REQUEST_POSTS = 'REQUEST_POSTS';
 export function requestPosts(postType) {
