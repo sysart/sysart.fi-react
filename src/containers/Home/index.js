@@ -28,7 +28,9 @@ const metaData = {
 const store = configureStore();
 
 export class Home extends Component {
+
   render() {
+      console.log('render home', this);
     return (
       <section>
         <DocumentMeta {...metaData} />

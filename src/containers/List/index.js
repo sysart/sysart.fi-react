@@ -32,6 +32,7 @@ export class List extends Component {
   }
 
   render() {
+    console.log('render list', this);
     return (
       <section>
         <DocumentMeta {...metaData} />

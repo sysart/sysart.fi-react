@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import configureStore from 'store/configureStore';
 
 /* components */
+import { TopImage } from 'components/TopImage';
 
 import { CustomersPage } from 'components/CustomersPage';
 
@@ -21,12 +22,13 @@ const metaData = {
 
 const store = configureStore();
 
-export class Customers extends Component {
+export class CustomerPage extends Component {
   render() {
       console.log('render customers ', this);
     return (
       <section>
         <DocumentMeta {...metaData} />
+        <TopImage />
         <CustomersPage />
       </section>
     );
