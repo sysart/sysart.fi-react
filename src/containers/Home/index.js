@@ -10,8 +10,7 @@ import { Projects } from 'components/Projects';
 import { Posts } from 'components/Posts';
 import { Services } from 'components/Services';
 import { CustomerIcons } from 'components/CustomerIcons';
-
-import './styles/home.scss';
+import { Footer } from 'components/Footer';
 
 const metaData = {
   title: 'Redux Easy Boilerplate',
@@ -38,6 +37,7 @@ export class Home extends Component {
         <Services />
         <Posts />
         <CustomerIcons />
+        <Footer />
       </section>
     );
   }

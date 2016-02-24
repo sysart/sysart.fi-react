@@ -1,9 +1,9 @@
 /* global styles */
 
 @import 'fonts/roboto';
-@import 'colors';
-@import 'typography';
-@import 'links';
+@import '../../../sass/colors';
+@import '../../../sass/typography';
+@import '../../../sass/links';
 
 :global(body) {
   position: relative;

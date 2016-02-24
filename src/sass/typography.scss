@@ -3,7 +3,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  color: $main-font-color;
+  color: $color-font-main;
 }
 
 h1,
@@ -20,5 +20,5 @@ p {
 }
 
 a, a:hover {
-    color: $main-font-color;
+    color: $color-font-main;
 }
