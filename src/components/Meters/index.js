@@ -11,17 +11,17 @@ const Meters = ({meters}) => {
             <div className="container">
                 <div className="row">
                     {
-                        meters.map((meter) => {
+                        meters.map((meter, key) => {
                             console.log('meter', meter);
                             return (
-                                <Meter meter={meter} />
+                                <Meter key={key} meter={meter} />
                             )
                         })
                     }
                 </div>
             </div>
         </div>
-        
+
     )
 }
 

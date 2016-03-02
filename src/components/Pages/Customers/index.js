@@ -6,7 +6,9 @@ import * as actionCreators from 'actions/customers';
 
 // UI
 import Meters from 'components/Meters';
-import { TopImage } from 'components/TopImage'
+import { TopImage } from 'components/TopImage';
+import Contributors from 'components/Contributors';
+
 
 import { styles } from './styles.scss';
 
@@ -59,7 +61,13 @@ export class SingleCustomerPage extends Component {
 
             console.log('page content ', pageContent);
 
-            const { content, big_hero_text, hero_image, small_hero_text, meters } = pageContent;
+            const { content,
+                    big_hero_text,
+                    hero_image,
+                    small_hero_text,
+                    meters,
+                    contributors
+                } = pageContent;
             return (
 
                 <section  className={`${styles}`}>
@@ -80,11 +88,7 @@ export class SingleCustomerPage extends Component {
                     </div>
 
 
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-sm-12" dangerouslySetInnerHTML={{__html: content}}></div>
-                        </div>
-                    </div>
+                    <Contributors contributors={contributors} />
 
 
                 </section>
