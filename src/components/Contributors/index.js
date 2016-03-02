@@ -12,7 +12,7 @@ const Contributors = ({contributors}) => {
                         contributors.map((contributor, key) => {
                             return (
                                 <div className="col-sm-6">
-                                    <Employee key={'emp-' + key} employee={contributor} />
+                                    <Employee key={'emp-' + key} employee={contributor} layout="horizontal" />
                                 </div>
                             )
                         })

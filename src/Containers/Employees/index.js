@@ -5,8 +5,9 @@ import configureStore from 'store/configureStore';
 
 /* components */
 import { TopImage } from 'components/TopImage';
-import { SingleCustomerPage } from 'components/Pages/Customers';
+
 import { Footer } from 'components/Footer';
+import { EmployeesPage } from 'components/Pages/Employees';
 
 const metaData = {
   title: 'Redux Easy Boilerplate',
@@ -22,13 +23,13 @@ const metaData = {
 
 const store = configureStore();
 
-export class CustomerPage extends Component {
+export class Employees extends Component {
   render() {
       console.log('render single customer container ', this);
     return (
       <section>
         <DocumentMeta {...metaData} />
-        <SingleCustomerPage {...this.props} />
+        <EmployeesPage />
         <Footer />
       </section>
     );
