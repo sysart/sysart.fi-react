@@ -6,8 +6,10 @@ import * as actionCreators from 'actions/customers';
 
 // UI
 import Meters from 'components/Meters';
+
 import { TopImage } from 'components/TopImage';
 import Contributors from 'components/Contributors';
+import WpContent from 'components/WpContent';
 
 
 import { styles } from './styles.scss';
@@ -77,20 +79,11 @@ export class SingleCustomerPage extends Component {
                         smallTitle={small_hero_text}
                     />
 
-                <Meters
-                    meters={meters}
-                    />
-
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-sm-12" dangerouslySetInnerHTML={{__html: content}}></div>
-                        </div>
-                    </div>
-
-
+                    <Meters
+                        meters={meters}
+                        />
+                    <WpContent content={content}/>
                     <Contributors contributors={contributors} />
-
-
                 </section>
 
             );
