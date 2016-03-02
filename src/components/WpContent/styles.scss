@@ -1,0 +1,47 @@
+:local(.styles) {
+
+	padding: 0 8vw;
+
+		h2 {
+			font-size: 2.4em;
+			font-weight: bold;
+		}
+		
+		blockquote {
+			text-align: center;
+			border: 0;
+			padding: 80px 8vw;
+
+			& p {
+				color: #4A4A4A;
+				font-size: 2.6em;
+				font-weight: bold;
+				line-height: 1em;
+				/*TODO campton-bold*/
+			}
+
+			& p:first-of-type:before {
+				content: '\201C';
+			}
+
+			& p:last-of-type:after {
+				content: '\201D';
+			}
+
+		}
+
+		ol {
+			padding: 80px 2vw;
+			text-align: center;
+			list-style: none;
+
+			li {
+				/*TODO campton-bold*/
+				color: #EA5A0A;
+				font-size: 2em;
+				font-weight: bold;
+				line-height: 2em;
+			}
+		}
+
+}

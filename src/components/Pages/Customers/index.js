@@ -6,6 +6,7 @@ import * as actionCreators from 'actions/customers';
 
 // UI
 import Meters from 'components/Meters';
+import WpContent from 'components/WpContent';
 import { TopImage } from 'components/TopImage'
 
 import { styles } from './styles.scss';
@@ -73,18 +74,8 @@ export class SingleCustomerPage extends Component {
                     meters={meters}
                     />
 
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-sm-12" dangerouslySetInnerHTML={{__html: content}}></div>
-                        </div>
-                    </div>
+                    <WpContent content={content}/>
 
-
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-sm-12" dangerouslySetInnerHTML={{__html: content}}></div>
-                        </div>
-                    </div>
 
 
                 </section>
