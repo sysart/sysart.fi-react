@@ -33,7 +33,7 @@ export class Home extends Component {
     return (
       <section>
         <DocumentMeta {...metaData} />
-        <TopImage />
+        <TopImage title={'Ei tarttuvaa slogania, vaan hyvää ohjelmistokehitystä'} />
         <Services />
         <Posts />
         <CustomerIcons />

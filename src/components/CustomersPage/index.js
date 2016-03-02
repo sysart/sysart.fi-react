@@ -1,3 +1,4 @@
+
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -27,6 +28,9 @@ export class CustomersPage extends Component {
     }
 
     render() {
+
+    
+
         console.log('render customers ', this);
         const { items } = this.props;
 

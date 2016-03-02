@@ -6,7 +6,11 @@
   background: #fff;
   background-size: 100% auto;
 
-  height: 500px;
+
+  &>div.container{
+    height: 500px;
+  }
+
 
   @media (min-width: 768px) and (max-width: 992px) {
     height: 340px;
@@ -16,11 +20,14 @@
     height: 320px;
   }
 
+  p.small-title{
+      margin-top: 20%;
+  }
+
   h1.title {
     color: #4a4a4a;
     font-size: 60px;
-
-    margin-top: 20%;
+    margin-top:0;
   }
 
   p {

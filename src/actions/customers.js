@@ -33,7 +33,7 @@ export function receiveCustomers(postType, json) {
     }
 }
 
-// Get customers page 
+// Get customers page
 export function fetchCustomersPage(postType) {
     return dispatch => {
 
@@ -50,5 +50,28 @@ export function receiveCustomersPage(postType, json) {
         type: RECEIVE_CUSTOMERS_PAGE,
         postType,
         items: json
+    }
+}
+
+// Get single customer page
+export function fetchSingleCustomerPage(slug) {
+    return dispatch => {
+        dispatch(requestCustomers(''));
+
+        console.log('Getting', 'http://185.26.50.90/wp-json/sysart-extend/v1/customer/' + slug);
+
+        return fetch('http://185.26.50.90/wp-json/sysart-extend/v1/customer/' + slug)
+            .then(response => response.json())
+            .then(json => dispatch(receiveSingleCustomerPage(slug, json)))
+    }
+}
+
+export const RECEIVE_SINGLE_CUSTOMERS_PAGE = 'RECEIVE_SINGLE_CUSTOMERS_PAGE';
+export function receiveSingleCustomerPage(slug, json) {
+
+    return {
+        type: RECEIVE_SINGLE_CUSTOMERS_PAGE,
+        slug,
+        item: json
     }
 }
