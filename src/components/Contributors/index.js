@@ -7,15 +7,17 @@ const Contributors = ({contributors}) => {
     return (
         <div className="container">
             <div className="row">
-                {
-                    contributors.map((contributor, key) => {
-                        return (
-                            <div className="col-sm-6">
-                                <Employee key={'emp-' + key} employee={contributor} />
-                            </div>
-                        )
-                    })
-                }
+                <div className="col-md-10 col-md-offset-1">
+                    {
+                        contributors.map((contributor, key) => {
+                            return (
+                                <div className="col-sm-6">
+                                    <Employee key={'emp-' + key} employee={contributor} />
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
         </div>
     );

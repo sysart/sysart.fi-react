@@ -6,13 +6,15 @@ const WpContent = ({content}) => {
 return (
 
 		<div className={styles}>
-			<div className="container">	
+			<div className="container">
 				<div className="row">
-					<div dangerouslySetInnerHTML={{__html:content}}>
+					<div className="col-md-10 col-md-offset-1">
+						<div dangerouslySetInnerHTML={{__html:content}}></div>
 					</div>
 				</div>
 			</div>
 		</div>
+
 
 	)
 }

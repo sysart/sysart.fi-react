@@ -3,11 +3,12 @@
     align-items: center;
 
     .image{
-        flex: 0 0 200px;
+        flex: 0 0 150px;
         border-radius: 1000px;
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         background-size: cover;
+        margin-right: 15px;
     }
 
     .name{

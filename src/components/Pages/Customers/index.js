@@ -10,6 +10,7 @@ import Meters from 'components/Meters';
 import { TopImage } from 'components/TopImage';
 import Contributors from 'components/Contributors';
 import WpContent from 'components/WpContent';
+import WpTitle from 'components/WpTitle';
 
 
 import { styles } from './styles.scss';
@@ -64,11 +65,13 @@ export class SingleCustomerPage extends Component {
             console.log('page content ', pageContent);
 
             const { content,
+                    title,
                     big_hero_text,
                     hero_image,
                     small_hero_text,
                     meters,
-                    contributors
+                    contributors,
+                    publish_date
                 } = pageContent;
             return (
 
@@ -82,6 +85,8 @@ export class SingleCustomerPage extends Component {
                     <Meters
                         meters={meters}
                         />
+
+                    <WpTitle title={title} published={publish_date} />
                     <WpContent content={content}/>
                     <Contributors contributors={contributors} />
                 </section>

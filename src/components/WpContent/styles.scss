@@ -1,12 +1,17 @@
 :local(.styles) {
 
-	padding: 0 8vw;
+
 
 		h2 {
 			font-size: 2.4em;
 			font-weight: bold;
 		}
-		
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+
 		blockquote {
 			text-align: center;
 			border: 0;
