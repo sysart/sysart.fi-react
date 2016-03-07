@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-fetch';
+import { RestConfig } from 'config/rest';
 
 export const REQUEST_CUSTOMERS = 'REQUEST_CUSTOMERS';
 export function requestCustomers(postType) {
@@ -16,7 +17,7 @@ export function fetchCustomers(postType) {
 
         console.log('Getting data customers');
 
-        return fetch('http://185.26.50.90/wp-json/sysart-extend/v1/frontpage-customers')
+        return fetch(RestConfig.domain + 'wp-json/sysart-extend/v1/frontpage-customers')
             .then(response => response.json())
             .then(json => dispatch(receiveCustomers(postType, json)))
     }
@@ -37,7 +38,7 @@ export function receiveCustomers(postType, json) {
 export function fetchCustomersPage(postType) {
     return dispatch => {
 
-        return fetch('http://185.26.50.90/wp-json/sysart-extend/v1/customers-list')
+        return fetch(RestConfig.domain + 'wp-json/sysart-extend/v1/customers-list')
             .then(response => response.json())
             .then(json => dispatch(receiveCustomersPage(postType, json)))
     }
@@ -60,7 +61,7 @@ export function fetchSingleCustomerPage(slug) {
 
         console.log('Getting', 'http://185.26.50.90/wp-json/sysart-extend/v1/customer/' + slug);
 
-        return fetch('http://185.26.50.90/wp-json/sysart-extend/v1/customer/' + slug)
+        return fetch(RestConfig.domain + 'wp-json/sysart-extend/v1/customer/' + slug)
             .then(response => response.json())
             .then(json => dispatch(receiveSingleCustomerPage(slug, json)))
     }

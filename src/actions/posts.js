@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-fetch';
+import { RestConfig } from 'config/rest';
 
 export const REQUEST_POSTS = 'REQUEST_POSTS';
 export function requestPosts(postType) {
@@ -14,9 +15,9 @@ export function fetchPosts(postType) {
     return dispatch => {
         dispatch(requestPosts(postType));
 
-        console.log('Getting data');
+        console.log('Getting data', RestConfig);
 
-        return fetch('http://185.26.50.90/wp-json/sysart-extend/v1/frontpage-posts')
+        return fetch(RestConfig.domain + '/wp-json/sysart-extend/v1/frontpage-posts')
             .then(response => response.json())
             .then(json => dispatch(receivePosts(postType, json)))
     }
