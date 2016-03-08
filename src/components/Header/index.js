@@ -33,7 +33,7 @@ export class Header extends Component {
                 <Link to="/me" activeClassName="active">
                   Me
                 </Link>
-                <Link to="/list" activeClassName="active">
+                <Link to="/blogi" activeClassName="active">
                   Blogi
                 </Link>
                 <Link to="/list" activeClassName="active">

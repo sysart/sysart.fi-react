@@ -7,6 +7,7 @@ import { posts } from './posts';
 import { services } from './services';
 import { customers } from './customers';
 import { employees } from './employees';
+import { blogs } from './blog';
 
 
 
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   routing: routeReducer,
   /* your reducers */
   employees,
+  blogs,
   posts,
   items,
   services,

@@ -17,7 +17,7 @@ export function fetchPosts(postType) {
 
         console.log('Getting data', RestConfig);
 
-        return fetch(RestConfig.domain + '/wp-json/sysart-extend/v1/frontpage-posts')
+        return fetch(RestConfig.domain + '/wp-json/sysart-extend/v1/blog')
             .then(response => response.json())
             .then(json => dispatch(receivePosts(postType, json)))
     }

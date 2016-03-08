@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import moment from 'moment';
+import _ from 'lodash';
 
 export default class PostItem extends Component {
 
@@ -8,40 +9,53 @@ export default class PostItem extends Component {
     }
 
     render() {
-        const { post_title, post_excerpt, featured_image, post_date, post_categories } = this.props.item;
-        console.log('PostItem', this.props);
+        console.log('Rendder postImte', this);
+        const { title, excerpt, featured_image, post_date, categories } = this.props.item;
+
+
 
         let postImage = '';
-        let categories = '';
+        let post_categories = '';
         if(featured_image){
             postImage = (
                 <img src={featured_image} />
             )
         }
 
-        if(post_categories) {
-            post_categories.map((cat) => {
-                categories += cat.name + ' ';
+        if(categories) {
+            categories.map((cat) => {
+                console.log(' map cat ', cat);
+                post_categories += cat.name + ' ';
             })
         }
 
+        console.log('Post cat', post_categories);
+
         // Publish time
-        let published = moment(post_date).format('DD.MM.YYYY')
+
+        let published
+        if(post_date && !_.contains(this.props.hide, 'date')) {
+            published = (
+                <p className="published">
+                    {post_date} - {post_categories}
+                </p>
+            )
+
+        }
+
 
         return (
             <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center">
-                <p className="published">
-                    {published} - {categories}
-                </p>
+                { published }
                 <div className="image-wrapper">
                     {postImage}
                 </div>
                 <h4>
-                    {post_title}
+                    {title}
                 </h4>
                 <div>
                     <p className="excerpt">
-                        {post_excerpt}
+                        {excerpt}
                     </p>
                 </div>
             </div>
