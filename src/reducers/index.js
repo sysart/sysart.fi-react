@@ -8,19 +8,20 @@ import { services } from './services';
 import { customers } from './customers';
 import { employees } from './employees';
 import { blogs } from './blog';
-
+import { jobs } from './job';
 
 
 const rootReducer = combineReducers({
-  form: formReducer,
-  routing: routeReducer,
-  /* your reducers */
-  employees,
-  blogs,
-  posts,
-  items,
-  services,
-  customers
+    form: formReducer,
+    routing: routeReducer,
+    /* your reducers */
+    employees,
+    blogs,
+    posts,
+    items,
+    services,
+    customers,
+    jobs
 });
 
 export default rootReducer;
