@@ -1,15 +1,27 @@
 :local(.styles) {
+
+  div[class^="col-"] {
+      padding-left: 80px;
+      padding-right: 30px;
+
+  }
+
     .image-wrapper {
         height: 300px;
     }
     h4 {
+        font-family: 'campton';
         text-transform: uppercase;
-        font-weight: bold;
+        font-weight: 700;
         color: #4a4a4a;
+        font-size: 24px;
     }
 
     p {
-        font-size: 1.2em;
+        font-family: 'campton';
+        font-size: 20px;
+        font-weight: 200;
         line-height: 1.6;
+        margin-top: 0.8em;
     }
 }

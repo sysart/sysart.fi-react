@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
 
+
     .horizontal{
         .info{
             padding-left: 15px;
@@ -10,7 +11,7 @@
 
     .vertical{
         flex-direction: column;
-        padding-bottom: 20px;
+        padding-bottom: 70px;
         .info{
             text-align: center;
         }
@@ -27,13 +28,26 @@
 
     .name{
         font-weight: bold;
+        font-size: 24px;
+        font-family: 'campton';
+        color:#4a4a4a;
+        margin-top: 0.8em;
     }
 
+
     .title{
+      font-family: 'campton';
+      font-size: 18px;
+      font-weight: 200;
+      line-height: 1.6;
 
     }
 
     .email{
+      font-family: 'campton';
+      font-size: 18px;
+      font-weight: 200;
+      line-height: 1.6;
 
     }
 }

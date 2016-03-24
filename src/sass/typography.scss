@@ -1,7 +1,7 @@
 /* Typography */
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Campton', sans-serif;
   font-weight: 300;
   color: $color-font-main;
 }
@@ -9,7 +9,13 @@ body {
 h1,
 h2,
 h3,
-h4,
+h4 {
+    font-family: 'campton';
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1.6;
+    margin-top: 0.8em;
+}
 h5,
 h6 {
   font-weight: 300;
