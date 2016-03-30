@@ -32,6 +32,11 @@
         font-family: 'campton';
 
         @media (#{$phone}) {
+            display: none;
+
+            &.visible{
+                display: block;
+            }
             a {
                 float:left;
                 clear: both;

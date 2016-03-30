@@ -27,7 +27,7 @@ export class Header extends Component {
 
         let navClass = '';
         if(this.state.mobileMenuOpen){
-
+            navClass = 'visible';
         }
 
         return (
@@ -45,7 +45,7 @@ export class Header extends Component {
                         </div>
 
                         <div className="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                            <nav>
+                            <nav className={navClass}>
                                 <Link to="/home" activeClassName="active">
                                     Palvelut
                                 </Link>
