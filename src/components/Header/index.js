@@ -1,50 +1,75 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
+import React, {Component} from 'react';
+import {Link} from 'react-router';
 
 /* component styles */
-import { styles } from './styles.scss';
+import {styles} from './styles.scss';
 
 const sysartLogo = require('./files/logo.png');
 
 
 export class Header extends Component {
-  render() {
-    return (
-      <header className={`${styles}`}>
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 logo">
-              <Link to="/">
-                <img src={sysartLogo} />
-              </Link>
-            </div>
 
-            <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-              <nav>
-                <Link to="/home" activeClassName="active">
-                  Palvelut
-                </Link>
-                <Link to="/asiakkaat" activeClassName="active">
-                  Asiakkaat
-                </Link>
-                <Link to="/tyopaikat" activeClassName="active">
-                  Työpaikat
-                </Link>
-                <Link to="/me" activeClassName="active">
-                  Me
-                </Link>
-                <Link to="/blogi" activeClassName="active">
-                  Blogi
-                </Link>
-                <Link to="/list" activeClassName="active">
-                  Yhteystiedot
-                </Link>
-              </nav>
-            </div>
+    constructor(props, context){
+        super(props, context);
 
-          </div>
-        </div>
-      </header>
-    );
-  }
+        this.state = {
+            mobileMenuOpen: false
+        }
+    }
+
+    toggleMobileMenu = () => {
+        this.setState({
+            mobileMenuOpen: !this.state.mobileMenuOpen
+        })
+    };
+
+    render() {
+
+        let navClass = '';
+        if(this.state.mobileMenuOpen){
+
+        }
+
+        return (
+            <header className={`${styles}`}>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xs-12 col-sm-3 col-md-3 col-lg-3 logo">
+                            <Link to="/">
+                                <img src={sysartLogo}/>
+                            </Link>
+                        </div>
+
+                        <div className="visible-xs-block col-xs-12 mobile-menu-toggler">
+                            <i onClick={this.toggleMobileMenu} className="fa fa-bars"></i>
+                        </div>
+
+                        <div className="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                            <nav>
+                                <Link to="/home" activeClassName="active">
+                                    Palvelut
+                                </Link>
+                                <Link to="/asiakkaat" activeClassName="active">
+                                    Asiakkaat
+                                </Link>
+                                <Link to="/tyopaikat" activeClassName="active">
+                                    Työpaikat
+                                </Link>
+                                <Link to="/me" activeClassName="active">
+                                    Me
+                                </Link>
+                                <Link to="/blogi" activeClassName="active">
+                                    Blogi
+                                </Link>
+                                <Link to="/yhteystiedot" activeClassName="active">
+                                    Yhteystiedot
+                                </Link>
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+        );
+    }
 }
