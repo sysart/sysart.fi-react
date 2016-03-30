@@ -9,6 +9,7 @@ import { customers } from './customers';
 import { employees } from './employees';
 import { blogs } from './blog';
 import { jobs } from './job';
+import { contactPage } from './contact';
 
 
 const rootReducer = combineReducers({
@@ -21,7 +22,8 @@ const rootReducer = combineReducers({
     items,
     services,
     customers,
-    jobs
+    jobs,
+    contactPage
 });
 
 export default rootReducer;

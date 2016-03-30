@@ -37,8 +37,10 @@ export class BlogListPage extends Component {
 
     render() {
         console.log('render blog list page ', this);
+        console.log('Got these blogs ', this.props.blogs);
 
-        const blogs = this.props.blogs.toJS();
+        const { blogs } = this.props;
+
 
         console.log('Blogs in JS', blogs);
 
