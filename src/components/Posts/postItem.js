@@ -34,7 +34,7 @@ export default class PostItem extends Component {
         // Publish time
 
         let published
-        if(post_date && !_.contains(this.props.hide, 'date')) {
+        if(post_date && !_.includes(this.props.hide, 'date')) {
             published = (
                 <p className="published">
                     {post_date} - {post_categories}

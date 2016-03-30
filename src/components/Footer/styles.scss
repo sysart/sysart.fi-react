@@ -5,8 +5,13 @@
     color: $color-font-light;
 
     h4 {
-        margin-top: 40px;
+        font-family:'campton';
+        font-weight: 600;
+        font-size:20px;
+        margin-top: 45px;
         text-transform: uppercase;
+        line-height: 1.2em;
+        letter-spacing: 1px;
 
         &:first-child {
             margin-top: 0;
@@ -14,7 +19,10 @@
     }
 
     p {
+        font-family: 'campton';
         line-height: 1;
+        font-size: 18px;
+        font-weight: 100;
     }
 
     .container {
@@ -26,6 +34,7 @@
         text-align: center;
 
         p {
+          font-family: 'campton';
             margin-top: 20px;
             font-size: 1.5em;
             line-height: 1.6;

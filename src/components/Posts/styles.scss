@@ -1,10 +1,21 @@
 :local(.styles) {
+  .container {
+    padding-bottom: 150px;
+  }
+
     .published {
         text-align: left;
+        font-style: italic;
+        font-size: 18px;
+        min-height: 50px;
     }
 
     .image-wrapper {
         height: 250px;
+        img {
+          height: 100%;
+          width: auto;
+        }
     }
 
     .excerpt {
@@ -13,10 +24,29 @@
     }
 
     h1 {
+        font-family: 'campton';
         text-transform: uppercase;
         text-align: center;
         font-weight: bold;
         margin: 100px auto;
         color: #4a4a4a;
     }
+
+    h4 {
+    font-family: 'campton';
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #4a4a4a;
+    font-size: 24px;
+    padding-top: 30px;
+}
+
+    p {
+        font-family: 'campton';
+        font-size: 20px;
+        font-weight: 200;
+        line-height: 1.6;
+        margin-top: 0.8em;
+    }
+
 }

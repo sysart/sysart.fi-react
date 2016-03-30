@@ -4,10 +4,16 @@
 @import '../../../sass/colors';
 @import '../../../sass/typography';
 @import '../../../sass/links';
+@import '../../../sass/screens';
 
 :global(body) {
   position: relative;
 
+  @media (#{$large-desktop}) {
+     .container{
+         width: 1366px;
+     }
+   }
   h1 {
     margin-top: 80px;
   }
