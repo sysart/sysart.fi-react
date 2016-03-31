@@ -7,7 +7,7 @@ export class CustomerLogo extends Component {
         super(props, context);
 
         this.state = {
-            hover: true
+            hover: false
         }
     }
 
