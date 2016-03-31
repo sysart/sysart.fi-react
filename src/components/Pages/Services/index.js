@@ -6,6 +6,8 @@ import * as actionCreators from 'actions/services';
 
 // UI
 
+import { ServicePageItem } from 'components/Services/PageItem';
+
 import { styles } from './styles.scss';
 
 /* Component */
@@ -42,9 +44,13 @@ export class ServicesPage extends Component {
 
         let items;
         if(this.props.items.length !== 0){
-            items = this.props.items.map((item) => {
+            items = this.props.items.map((item, index) => {
+                let layout = 'even';
+                if(index % 2){
+                    layout = 'odd'
+                }
                 return (
-                    <div>{item.title}</div>
+                    <ServicePageItem layout={layout} item={item} key={index} />
                 )
             })
         }
@@ -54,7 +60,7 @@ export class ServicesPage extends Component {
             <div className={styles}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-10 col-md-offset-1">
+                        <div className="col-md-12 ">
                             {items}
                         </div>
                     </div>
