@@ -11,13 +11,13 @@ import { ServicesPage } from 'components/Pages/Services';
 
 
 const metaData = {
-    title: 'Redux Easy Boilerplate',
-    description: 'Start you project easy and fast with modern tools',
-    canonical: 'http://example.com/path/to/page',
+    title: 'Sysart - Palvelut',
+    description: '',
+    canonical: '',
     meta: {
         charset: 'utf-8',
         name: {
-            keywords: 'react,meta,document,html,tags',
+            keywords: '',
         },
     },
 };

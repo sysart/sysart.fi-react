@@ -10,15 +10,15 @@ import { Footer } from 'components/Footer';
 import { EmployeesPage } from 'components/Pages/Employees';
 
 const metaData = {
-  title: 'Redux Easy Boilerplate',
-  description: 'Start you project easy and fast with modern tools',
-  canonical: 'http://example.com/path/to/page',
-  meta: {
-    charset: 'utf-8',
-    name: {
-      keywords: 'react,meta,document,html,tags',
+    title: 'Sysart - Me',
+    description: '',
+    canonical: '',
+    meta: {
+        charset: 'utf-8',
+        name: {
+            keywords: '',
+        },
     },
-  },
 };
 
 const store = configureStore();
