@@ -46,7 +46,7 @@ export class Header extends Component {
 
                         <div className="col-xs-12 col-sm-9 col-md-9 col-lg-9">
                             <nav className={navClass}>
-                                <Link to="/home" activeClassName="active">
+                                <Link to="/palvelut" activeClassName="active">
                                     Palvelut
                                 </Link>
                                 <Link to="/asiakkaat" activeClassName="active">

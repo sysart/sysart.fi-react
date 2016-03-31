@@ -33,3 +33,23 @@ export function receiveServices(postType, json) {
         items: json
     }
 }
+
+// For page
+
+export function fetchServicesPage() {
+    return dispatch => {
+        
+        return fetch(RestConfig.domain + 'wp-json/sysart-extend/v1/services')
+            .then(response => response.json())
+            .then(json => dispatch(receiveServicesPage(json)))
+    }
+}
+
+export const RECEIVE_SERVICES_PAGE = 'RECEIVE_SERVICES_PAGE';
+export function receiveServicesPage(json) {
+    console.log('receive posttype', json);
+    return {
+        type: RECEIVE_SERVICES_PAGE,
+        items: json
+    }
+}
