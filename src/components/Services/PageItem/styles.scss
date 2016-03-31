@@ -1,0 +1,33 @@
+:local(.styles) {
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &:nth-child(odd) {
+        background: #f9f9f9;
+    }
+
+    &:nth-child(even) {
+        background: #ffffff;
+    }
+
+    .icon-row{
+
+        border-top: 1px solid #ccc;
+        margin-top:20px;
+        padding-top:20px;
+
+        display: flex;
+        justify-content: center;
+
+        .icon{
+            text-align: center;
+            img{
+                width: 50px;
+            }
+        }
+
+    }
+
+
+}
