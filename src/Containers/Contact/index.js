@@ -10,13 +10,13 @@ import { Footer } from 'components/Footer';
 import { ContactPage } from 'components/Pages/Contact';
 
 const metaData = {
-    title: 'Redux Easy Boilerplate',
-    description: 'Start you project easy and fast with modern tools',
-    canonical: 'http://example.com/path/to/page',
+    title: 'Sysart - Yhteystiedot',
+    description: '',
+    canonical: '',
     meta: {
         charset: 'utf-8',
         name: {
-            keywords: 'react,meta,document,html,tags',
+            keywords: '',
         },
     },
 };

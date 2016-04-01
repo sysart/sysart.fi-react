@@ -61,7 +61,7 @@ export class EmployeesPage extends Component {
                             {
                                 employees.map((employee) => {
                                     return (
-                                        <div className="col-sm-3">
+                                        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                                             <Employee employee={employee} layout="vertical" />
                                         </div>
                                     )

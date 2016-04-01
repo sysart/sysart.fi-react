@@ -1,5 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 
+import { styles } from './styles.scss';
+
 export class ServicePageItem extends Component {
 
     constructor(props, context) {
@@ -11,9 +13,10 @@ export class ServicePageItem extends Component {
         console.log('Render service page item', this);
 
         const {item} = this.props;
-        const {description, title, image} = item;
+        const {description, title, image, icons} = item;
 
 
+        // Setup template parts
         const parts = [
             (
                 <div className="col-md-6">
@@ -30,6 +33,8 @@ export class ServicePageItem extends Component {
             )
         ];
 
+
+        // Set default layout order
         let template = (
             <div className="row">
                 {parts[0]}
@@ -37,6 +42,7 @@ export class ServicePageItem extends Component {
             </div>
         );
 
+        // if even item reverse order
         if(this.props.layout === 'even'){
             template = (
                 <div className="row">
@@ -47,8 +53,23 @@ export class ServicePageItem extends Component {
         }
 
         return (
-            <div className="col-xs-12">
+            <div className={`col-xs-12 ${styles}`}>
                 {template}
+
+                <div className="row icon-row">
+                    {
+                        icons.map((icon) => {
+                            return (
+                                <div className="icon">
+                                    <img src={icon.image} alt=""/>
+                                    <p>
+                                        {icon.text}
+                                    </p>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
         )
     }
