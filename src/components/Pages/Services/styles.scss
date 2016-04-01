@@ -1,3 +1,22 @@
 :local(.styles){
     padding-top: 200px;
+
+    h3 {
+    font-family: 'campton';
+    font-weight: 700;
+    color: #4a4a4a;
+    font-size: 36px;
+    padding-top: 30px;
+    text-align: left;
+}
+
+p {
+    font-family: 'campton';
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.6;
+    margin-top: 0.8em;
+    text-align: left;
+}
+
 }

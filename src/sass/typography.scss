@@ -6,9 +6,19 @@ body {
   color: $color-font-main;
 }
 
-h1,
-h2,
-h3,
+h1 {
+    font-family: 'campton';
+  }
+h2 {
+    font-family: 'campton';
+  }
+h3 {
+    font-family: 'campton';
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1.6;
+    margin-top: 0.8em;
+}
 h4 {
     font-family: 'campton';
     font-size: 20px;
@@ -16,7 +26,9 @@ h4 {
     line-height: 1.6;
     margin-top: 0.8em;
 }
-h5,
+h5 {
+    font-family: 'campton';
+  }
 h6 {
   font-weight: 300;
 }
