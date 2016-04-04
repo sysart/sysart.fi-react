@@ -1,5 +1,13 @@
 :local(.styles){
-    padding-top: 200px;
+    padding-top: 50px;
+
+    img {
+      width: 70%;
+}
+    .one-image {
+      text-align: center;
+
+    }
 
     .service-wrapper{
         &:nth-child(odd) {

@@ -27,7 +27,7 @@ export class ServicePageItem extends Component {
                 </div>
             ),
             (
-                <div className="col-md-6">
+                <div className="col-md-6 one-image">
                     <img src={image}/>
                 </div>
             )
