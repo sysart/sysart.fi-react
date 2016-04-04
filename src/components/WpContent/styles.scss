@@ -3,8 +3,20 @@
 
 
 		h2 {
-			font-size: 2.4em;
+			font-family: 'campton';
+			font-size: 36px;
 			font-weight: bold;
+			color: #4A4A4A;
+		}
+
+		p {
+		    margin: 0 0 10px;
+		    font-family: 'campton';
+		    font-size: 18px;
+		    font-weight: 200;
+		    line-height: 1.6;
+		    margin-top: 0.8em;
+		    text-align: left;
 		}
 
 		img{
@@ -16,12 +28,15 @@
 			text-align: center;
 			border: 0;
 			padding: 80px 8vw;
+			font-family: 'campton';
+			font-size: 20px;
+			font-style: italic;
 
 			& p {
 				color: #4A4A4A;
 				font-size: 2.6em;
 				font-weight: bold;
-				line-height: 1em;
+				line-height: 1.2em;
 				/*TODO campton-bold*/
 			}
 
@@ -36,6 +51,7 @@
 		}
 
 		ol {
+			font-family: 'campton';
 			padding: 80px 2vw;
 			text-align: center;
 			list-style: none;
