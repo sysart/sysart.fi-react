@@ -1,7 +1,8 @@
-import { OrderedMap } from 'immutable';
+import { OrderedMap, Map } from 'immutable';
 
 const INITIAL_STATE = {
     blogs : {}
+
 };
 
 export function blogs(state = INITIAL_STATE, action) {
@@ -16,6 +17,7 @@ export function blogs(state = INITIAL_STATE, action) {
 
                 let newBlog = {}
                 newBlog[blog.id] = {
+                    ...state.blogs[blog.id],
                     info: blog
                 };
 
@@ -27,12 +29,29 @@ export function blogs(state = INITIAL_STATE, action) {
 
             });
 
-
-
-
             return {
                 ...state,
                 blogs: updatedBlogs
+            };
+        case 'RECEIVE_BLOG_PAGE':
+
+            const {blog} = action;
+
+            let newItem = {};
+            newItem[blog.id] = {
+                ...state.blogs[blog.id],
+                content: blog
+            };
+
+            let updated = Object.assign(
+                {},
+                state.blogs,
+                newItem
+            );
+
+            return {
+                ...state,
+                blogs: updated
             };
 
         default:

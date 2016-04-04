@@ -19,6 +19,7 @@ import { browserHistory } from 'react-router'
 )
 export class BlogListPage extends Component {
 
+    
     constructor(props, context){
         super(props, context);
 
@@ -39,12 +40,6 @@ export class BlogListPage extends Component {
         console.log('componentWillReceiveProps', nextProps);
     }
     
-    onClick = (item) => {
-        console.log('Open blog post', item.slug)
-
-        browserHistory.push('/blogi/' + item.slug);
-    };
-
     render() {
         console.log('render blog list page ', this);
         console.log('Got these blogs ', this.props.blogs);
@@ -70,7 +65,7 @@ export class BlogListPage extends Component {
                                             key={index}
                                             hide={['date','categories']} 
                                             item={postItem} 
-                                            onClick={this.onClick}
+                                            
                                         />
                                     )
                                 })

@@ -19,3 +19,20 @@ export function receiveBlogList(json) {
         blogItems: json
     }
 }
+
+// Get blog page
+export function fetchBlogPage(slug) {
+    return dispatch => {
+        return fetch(RestConfig.domain + 'wp-json/sysart-extend/v1/blog/' + slug)
+            .then(response => response.json())
+            .then(json => dispatch(receiveBlogPage(json)))
+    }
+}
+export const RECEIVE_BLOG_PAGE = 'RECEIVE_BLOG_PAGE';
+export function receiveBlogPage(json) {
+
+    return {
+        type: RECEIVE_BLOG_PAGE,
+        blog: json
+    }
+}
