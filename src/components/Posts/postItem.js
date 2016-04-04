@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
 import moment from 'moment';
 import _ from 'lodash';
 
@@ -10,7 +11,7 @@ export default class PostItem extends Component {
 
     render() {
         console.log('Rendder postImte', this);
-        const { title, excerpt, featured_image, post_date, categories } = this.props.item;
+        const { id, title, excerpt, featured_image, post_date, categories, slug } = this.props.item;
 
 
 
@@ -33,7 +34,7 @@ export default class PostItem extends Component {
 
         // Publish time
 
-        let published
+        let published;
         if(post_date && !_.includes(this.props.hide, 'date')) {
             published = (
                 <p className="published">
@@ -43,22 +44,28 @@ export default class PostItem extends Component {
 
         }
 
-
+        let link = "/blogi/" + id + '/' + slug;
+        
         return (
-            <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center">
-                { published }
-                <div className="image-wrapper">
-                    {postImage}
+            <Link to={link} activeClassName="active">
+                <div
+                    className="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center"
+                >
+                    { published }
+                    <div className="image-wrapper">
+                        {postImage}
+                    </div>
+                    <h4>
+                        {title}
+                    </h4>
+                    <div>
+                        <p className="excerpt">
+                            {excerpt}
+                        </p>
+                    </div>
                 </div>
-                <h4>
-                    {title}
-                </h4>
-                <div>
-                    <p className="excerpt">
-                        {excerpt}
-                    </p>
-                </div>
-            </div>
+            </Link>
+
         )
     }
 }

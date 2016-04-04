@@ -8,6 +8,10 @@ import PostItem from 'components/Posts/postItem';
 
 import { styles } from './styles';
 
+import { browserHistory } from 'react-router'
+
+
+
 /* Component */
 @connect(
     state => state.blogs,
@@ -15,6 +19,7 @@ import { styles } from './styles';
 )
 export class BlogListPage extends Component {
 
+    
     constructor(props, context){
         super(props, context);
 
@@ -34,7 +39,7 @@ export class BlogListPage extends Component {
     componentWillReceiveProps(nextProps){
         console.log('componentWillReceiveProps', nextProps);
     }
-
+    
     render() {
         console.log('render blog list page ', this);
         console.log('Got these blogs ', this.props.blogs);
@@ -56,7 +61,12 @@ export class BlogListPage extends Component {
                                     let postItem = blogs[blogId].info;
 
                                     return (
-                                        <PostItem key={index} hide={['date','categories']} item={postItem} />
+                                        <PostItem 
+                                            key={index}
+                                            hide={['date','categories']} 
+                                            item={postItem} 
+                                            
+                                        />
                                     )
                                 })
                             }

@@ -25,6 +25,10 @@ export class Posts extends Component {
         fetchPosts();
     }
 
+    onClick = () => {
+        
+    }
+
     render() {
         const { items } = this.props;
         return (
@@ -35,7 +39,7 @@ export class Posts extends Component {
                     <h1>What's up?</h1>
                 </div>
                 <div className="row">
-                    {items.map((postItem, index) => <PostItem key={index} item={postItem} />)}
+                    {items.map((postItem, index) => <PostItem onClick={this.onClick} key={index} item={postItem} />)}
                 </div>
               </div>
             </section>
