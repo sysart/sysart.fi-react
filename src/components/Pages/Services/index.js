@@ -54,17 +54,10 @@ export class ServicesPage extends Component {
                 )
             })
         }
-
-
+        
         return (
             <div className={styles}>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12 ">
-                            {items}
-                        </div>
-                    </div>
-                </div>
+                {items}
             </div>
         )
     }

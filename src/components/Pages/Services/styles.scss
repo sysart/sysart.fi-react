@@ -1,6 +1,17 @@
 :local(.styles){
     padding-top: 200px;
 
+    .service-wrapper{
+        &:nth-child(odd) {
+            background: #ffffff;
+        }
+
+        &:nth-child(even) {
+            background: #f9f9f9;
+        }
+    }
+
+
     h3 {
     font-family: 'campton';
     font-weight: 700;

@@ -53,24 +53,35 @@ export class ServicePageItem extends Component {
         }
 
         return (
-            <div className={`col-xs-12 ${styles}`}>
-                {template}
 
-                <div className="row icon-row">
-                    {
-                        icons.map((icon) => {
-                            return (
-                                <div className="icon">
-                                    <img src={icon.image} alt=""/>
-                                    <p>
-                                        {icon.text}
-                                    </p>
-                                </div>
-                            )
-                        })
-                    }
+            <div className="service-wrapper">
+                <div className="container">
+                    <div className="row">
+
+                        <div className={`col-xs-12 ${styles}`}>
+                            {template}
+
+                            <div className="row icon-row">
+                                {
+                                    icons.map((icon) => {
+                                        return (
+                                            <div className="icon">
+                                                <img src={icon.image} alt=""/>
+                                                <p>
+                                                    {icon.text}
+                                                </p>
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
+            
+
         )
     }
 }

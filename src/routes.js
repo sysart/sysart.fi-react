@@ -15,13 +15,12 @@ import { Services } from 'containers/Services';
 
 export default (
   <Route path="/" component={App}>
-    <Route path="home" component={Home} />
+    <Route path="etusivu" component={Home} />
     <Route path="asiakkaat" component={Customers} />
     <Route path="asiakkaat/:customerName" component={CustomerPage} />
     <Route path="me" component={Employees} />
     <Route path="blogi" component={BlogList} />
     <Route path="tyopaikat" component={Jobs} />
-    <Route path="list" component={List} />
     <Route path="yhteystiedot" component={Contact} />
     <Route path="palvelut" component={Services} />
     <Route status={404} path="*" component={Home} />
