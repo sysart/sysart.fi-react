@@ -8,6 +8,10 @@ import PostItem from 'components/Posts/postItem';
 
 import { styles } from './styles';
 
+import { browserHistory } from 'react-router'
+
+
+
 /* Component */
 @connect(
     state => state.blogs,
@@ -34,6 +38,12 @@ export class BlogListPage extends Component {
     componentWillReceiveProps(nextProps){
         console.log('componentWillReceiveProps', nextProps);
     }
+    
+    onClick = (item) => {
+        console.log('Open blog post', item.slug)
+
+        browserHistory.push('/blogi/' + item.slug);
+    };
 
     render() {
         console.log('render blog list page ', this);
@@ -56,7 +66,12 @@ export class BlogListPage extends Component {
                                     let postItem = blogs[blogId].info;
 
                                     return (
-                                        <PostItem key={index} hide={['date','categories']} item={postItem} />
+                                        <PostItem 
+                                            key={index}
+                                            hide={['date','categories']} 
+                                            item={postItem} 
+                                            onClick={this.onClick}
+                                        />
                                     )
                                 })
                             }

@@ -33,7 +33,7 @@ export default class PostItem extends Component {
 
         // Publish time
 
-        let published
+        let published;
         if(post_date && !_.includes(this.props.hide, 'date')) {
             published = (
                 <p className="published">
@@ -42,10 +42,12 @@ export default class PostItem extends Component {
             )
 
         }
-
-
+        
         return (
-            <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center">
+            <div
+                className="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center"
+                onClick={this.props.onClick.bind(this, this.props.item)}
+            >
                 { published }
                 <div className="image-wrapper">
                     {postImage}
