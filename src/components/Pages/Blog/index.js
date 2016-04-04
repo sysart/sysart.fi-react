@@ -7,6 +7,7 @@ import * as actionCreators from 'actions/blog';
 
 import { styles } from './styles';
 
+import { TopImage } from 'components/TopImage';
 import WpContent from 'components/WpContent';
 import WpTitle from 'components/WpTitle';
 
@@ -44,10 +45,16 @@ export class BlogPage extends Component {
             return (
                 <section className={styles}>
 
+                    <TopImage
+                        image={content.featured_image }
+                        title={''}
+                        smallTitle={''}
+                    />
 
-                    <WpTitle title={content.title}  />
 
-                    <WpContent content={content.content}/>
+                    <WpTitle title={content.title} published={content.publish_date}  />
+
+                    <WpContent content={content.content} />
 
 
                 </section>
