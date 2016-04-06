@@ -27,22 +27,28 @@ export class TopImage extends Component {
 
     render() {
 
-
-
+      
         const { smallTitle, title } = this.props;
 
         let inlineStyle = {};
         let textColor = {};
+
+        let shader;
         if(this.props.image){
             inlineStyle.backgroundImage = `url(${this.props.image})`;
 
             textColor.color = "#ffffff";
+
+            shader = (
+              <div className="bg-shade"></div>
+            );
         }
 
         return (
             <section className={`${styles}`}  ref="parallax">
                 <div className="container" style={inlineStyle}>
                     <div className="row">
+                    { shader }
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
                             <LoadingOrderAnimation animation="fade-in"
                                                    move="from-bottom-to-top"
