@@ -42,6 +42,8 @@ export class TopImage extends Component {
             shader = (
               <div className="bg-shade"></div>
             );
+        } else {
+            inlineStyle.height = 'auto';
         }
 
         return (
