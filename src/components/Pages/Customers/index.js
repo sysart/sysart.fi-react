@@ -47,9 +47,6 @@ export class SingleCustomerPage extends Component {
     }
 
     render() {
-        console.log('render customers ', this);
-
-
         let pageContent;
 
         if(this.props.customer.count() !== 0){
