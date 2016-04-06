@@ -15,7 +15,7 @@ const metaData = {
   meta: {
     charset: 'utf-8',
     name: {
-      keywords: '',
+      keywords: ''
     },
   },
 };
