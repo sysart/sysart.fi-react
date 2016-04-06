@@ -28,7 +28,7 @@ const common = {
   },
 
   resolve: {
-    extensions: ['', '.jsx', '.js', '.json', '.scss'],
+    extensions: ['', '/index.js', '.jsx', '.js', '.json', '.scss'],
     modulesDirectories: ['node_modules', PATHS.app],
   },
 
