@@ -14,8 +14,8 @@ export function services(state = INITIAL_STATE, action) {
             console.log('res resvices', state, action);
             return Object.assign({}, state, {
                 isFetching: false,
-                items: [
-                    ...action.items.services
+                services: [
+                    ...action.items
                 ]
             });
 

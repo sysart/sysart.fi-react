@@ -10,6 +10,7 @@ import { employees } from './employees';
 import { blogs } from './blog';
 import { jobs } from './job';
 import { contactPage } from './contact';
+import { forms } from './form';
 
 
 const rootReducer = combineReducers({
@@ -23,7 +24,8 @@ const rootReducer = combineReducers({
     services,
     customers,
     jobs,
-    contactPage
+    contactPage,
+    forms
 });
 
 export default rootReducer;

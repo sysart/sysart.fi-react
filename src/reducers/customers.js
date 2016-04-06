@@ -24,7 +24,7 @@ export function customers(state = INITIAL_STATE, action) {
                 isFetching: false,
                 frontpage: {
                     items: [
-                        ...action.items.customers
+                        ...action.items
                     ]
                 }
             })
@@ -34,7 +34,7 @@ export function customers(state = INITIAL_STATE, action) {
                 isFetching: false,
                 listpage: {
                     items: [
-                        ...action.items.customers
+                        ...action.items
                     ]
                 }
             })
@@ -48,7 +48,7 @@ export function customers(state = INITIAL_STATE, action) {
 
             return Object.assign({}, state, {
                 isFetching: false,
-                single: state.single.set(action.slug, action.item.customer)
+                single: state.single.set(action.slug, action.item)
             });
 
 

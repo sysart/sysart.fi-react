@@ -27,15 +27,15 @@ export class Services extends Component {
 
     render() {
         console.log('render services ', this);
-        const { items } = this.props;
+        const { services } = this.props;
 
-        if(items){
+        if(services){
             return (
 
                 <section className={`${styles}`}>
                   <div className="container">
                     <div className="row">
-                        {items.map((item, index) => <ServiceItem key={index} item={item} />)}
+                        {services.map((item, index) => <ServiceItem key={index} item={item} />)}
                     </div>
                   </div>
                 </section>
