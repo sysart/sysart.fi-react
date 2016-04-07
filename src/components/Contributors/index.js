@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Employee from 'components/employee';
+import Employee from 'components/Employee';
 
 const Contributors = ({contributors}) => {
 
