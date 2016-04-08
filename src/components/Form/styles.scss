@@ -1,12 +1,15 @@
-:local(.styles){
+:local(.styles) {
 
-    &.newsletter{
+    &.newsletter {
+
+        margin-top: 50px;
         background: #F5F5F5;
 
         .form{
             text-align: center;
             padding-top: 100px;
             padding-bottom: 100px;
+
 
 
             input{
@@ -18,7 +21,7 @@
 
             }
 
-            .submit{
+            .submit {
                 color: white;
                 background: #f7944d;
                 border: none;

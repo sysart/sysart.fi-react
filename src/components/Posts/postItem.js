@@ -49,7 +49,7 @@ export default class PostItem extends Component {
         return (
             <Link to={link} activeClassName="active">
                 <div
-                    className="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center"
+                    className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center"
                 >
                     { published }
                     <div className="image-wrapper">
