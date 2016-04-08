@@ -1,20 +1,63 @@
 :local(.styles) {
 
+::-webkit-input-placeholder {
+    font-family: 'campton';
+    font-weight: bold;
+    color: #8F8F8F;
+    text-transform: uppercase;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    font-family: 'campton';
+    font-weight: bold;
+    color: #8F8F8F;
+    text-transform: uppercase;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    font-family: 'campton';
+    font-weight: bold;
+    color: #8F8F8F;
+    text-transform: uppercase;
+}
+
+:-ms-input-placeholder {  
+    font-family: 'campton';
+    font-weight: bold;
+    color: #8F8F8F;
+    text-transform: uppercase;
+}
+
     &.newsletter {
 
         margin-top: 50px;
         background: #F5F5F5;
 
-        .form{
+        .form {
             text-align: center;
             padding-top: 100px;
             padding-bottom: 100px;
 
+            h3 {
+                font-family: 'campton';
+                font-weight: bold;
+                color: #4a4a4a;
+                margin-bottom: 30px;
 
+            }
+
+            p {
+                font-family: 'campton';
+                font-size: 18px;
+                font-weight: 200;
+                line-height: 1.6;
+                margin-bottom: 30px;
+
+            }
 
             input{
                 font-size: 20px;
-                padding: 15px 5px;
+                padding: 15px 20px;
                 border: 1px solid #999;
                 background: #fff;
                 border-radius: 5px;
@@ -32,7 +75,7 @@
                 font-weight: bold;
 
                 padding: 17px;
-                border-radius: 5px;
+                border-radius: 3px;
 
             }
         }
