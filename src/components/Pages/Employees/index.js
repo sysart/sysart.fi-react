@@ -59,9 +59,9 @@ export class EmployeesPage extends Component {
     				<div className="row">
     					<div className="col-md-10 col-md-offset-1">
                             {
-                                employees.map((employee) => {
+                                employees.map((employee, index) => {
                                     return (
-                                        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div key={index} className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                                             <Employee employee={employee} layout="vertical" />
                                         </div>
                                     )

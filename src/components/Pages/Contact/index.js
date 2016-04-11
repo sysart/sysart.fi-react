@@ -72,7 +72,7 @@ export class ContactPage extends Component {
                                         persons.map((person, index) => {
                                             console.log('persons', person);
                                             return (
-                                                <div className="col-sm-4">
+                                                <div key={index} className="col-sm-4">
                                                     <Employee employee={person} layout="vertical" />
                                                 </div>
                                             )

@@ -63,9 +63,9 @@ export class ServicePageItem extends Component {
 
                             <div className="row icon-row">
                                 {
-                                    icons.map((icon) => {
+                                    icons.map((icon, index) => {
                                         return (
-                                            <div className="icon">
+                                            <div key={index} className="icon">
                                                 <img src={icon.image} alt=""/>
                                                 <p>
                                                     {icon.text}
