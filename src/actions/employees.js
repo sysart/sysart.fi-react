@@ -16,6 +16,6 @@ export function receiveEmployeeList(json) {
 
     return {
         type: RECEIVE_EMPLOYEE_LIST,
-        employees: json.employees
+        employees: json
     }
 }

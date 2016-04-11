@@ -5,7 +5,7 @@ import { styles } from './styles.scss';
 const Employee = ({employee, layout}) => {
 
     let layoutClass = "";
-    if(layout && layout.lenght !== 0){
+    if(layout && layout.length !== 0){
         layoutClass = layout;
     }
 
