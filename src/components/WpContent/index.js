@@ -8,7 +8,7 @@ return (
 		<div className={styles}>
 			<div className="container">
 				<div className="row">
-					<div className="col-md-10 col-md-offset-1">
+					<div className="col-md-8 col-md-offset-2">
 						<div dangerouslySetInnerHTML={{__html:content}}></div>
 					</div>
 				</div>
