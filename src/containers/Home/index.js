@@ -58,7 +58,8 @@ export class Home extends Component {
                 <DocumentMeta {...metaData} />
                 <TopImage
                     cta={this.props.cta}
-                    title={'Ei tarttuvaa slogania, vaan hyvää ohjelmistokehitystä'}
+                    title={this.props.hero.text_large}
+                    smallTitle={this.props.hero.text_small}
                     />
                 <Services />
                 <Form formid={1} />
