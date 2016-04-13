@@ -54,4 +54,20 @@
     p {
         color: #fff;
     }
+
+    // CALL TO ACTION
+
+    .cta{
+        .cta-button{
+            color: white;
+            background: #EA5A0A;
+            border: none;
+            margin-left: 40px;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 20px 40px;
+            border-radius: 3px;
+        }
+    }
 }

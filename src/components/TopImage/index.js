@@ -27,7 +27,7 @@ export class TopImage extends Component {
 
     render() {
 
-      
+
         const { smallTitle, title } = this.props;
 
         let inlineStyle = {};
@@ -44,6 +44,18 @@ export class TopImage extends Component {
             );
         } else {
             inlineStyle.height = 'auto';
+        }
+
+        // Call To Action
+        let cta;
+        if(this.props.cta){
+            cta = (
+                <div className="cta">
+                    <a href={this.props.cta.url} target="_blank" className="cta-button">
+                        {this.props.cta.text}
+                    </a>
+                </div>
+            )
         }
 
         return (
@@ -71,6 +83,8 @@ export class TopImage extends Component {
                                 <h1 style={textColor} className="title">
                                     {title}
                                 </h1>
+
+                                { cta }
                             </LoadingOrderAnimation>
 
                         </div>

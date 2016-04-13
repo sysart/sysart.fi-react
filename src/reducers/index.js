@@ -11,6 +11,7 @@ import { blogs } from './blog';
 import { jobs } from './job';
 import { contactPage } from './contact';
 import { forms } from './form';
+import { frontpage } from './frontpage';
 
 
 const rootReducer = combineReducers({
@@ -25,7 +26,8 @@ const rootReducer = combineReducers({
     customers,
     jobs,
     contactPage,
-    forms
+    forms,
+    frontpage
 });
 
 export default rootReducer;

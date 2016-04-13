@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import DocumentMeta from 'react-document-meta';
 import {Provider} from 'react-redux';
 import configureStore from 'store/configureStore';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 /* components */
 import {TopImage} from 'components/TopImage';
@@ -13,6 +15,9 @@ import {CustomerIcons} from 'components/CustomerIcons';
 import {Footer} from 'components/Footer';
 
 import {Form} from 'components/Form';
+
+// action creators
+import * as actionCreators from 'actions/loader';
 
 const metaData = {
     title: 'Sysart',
@@ -28,14 +33,33 @@ const metaData = {
 
 const store = configureStore();
 
+@connect(
+    state => state.frontpage,
+    dispatch => bindActionCreators(actionCreators, dispatch)
+)
 export class Home extends Component {
+
+    constructor(props, context){
+        super(props, context);
+
+    }
+
+    componentWillMount(){
+        const { dispatch, loadFromApi } = this.props;
+
+        loadFromApi('/frontpage', 'RES_FRONTPAGE_SETTINGS');
+    }
+
 
     render() {
         console.log('render home', this);
         return (
             <section>
                 <DocumentMeta {...metaData} />
-                <TopImage title={'Ei tarttuvaa slogania, vaan hyvää ohjelmistokehitystä'}/>
+                <TopImage
+                    cta={this.props.cta}
+                    title={'Ei tarttuvaa slogania, vaan hyvää ohjelmistokehitystä'}
+                    />
                 <Services />
                 <Form formid={1} />
                 <Posts />
