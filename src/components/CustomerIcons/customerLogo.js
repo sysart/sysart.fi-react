@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import moment from 'moment';
+import { Link } from 'react-router';
 
 export class CustomerLogo extends Component {
 
@@ -24,7 +25,7 @@ export class CustomerLogo extends Component {
     };
 
     render() {
-        const { logo, logo_hover } = this.props.item;
+        const { logo, logo_hover, slug, link_reference } = this.props.item;
         console.log('Customer logo', this.props);
 
         let image = (
@@ -38,15 +39,30 @@ export class CustomerLogo extends Component {
 
         }
 
+        if(link_reference){
+            return (
+                <Link to={'asiakkaat/' + slug} activeClassName="active">
+                    <div
+                        className="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center customer-logo"
+                        onMouseEnter={this.onMouseEnter}
+                        onMouseLeave={this.onMouseLeave}
+                    >
+                        {image}
+                    </div>
+                </Link>
+            )
+        }else{
+            return (
+                <div
+                    className="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center customer-logo"
+                    onMouseEnter={this.onMouseEnter}
+                    onMouseLeave={this.onMouseLeave}
+                >
+                    {image}
+                </div>
+            )
+        }
 
-        return (
-            <div
-                className="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center customer-logo"
-                onMouseEnter={this.onMouseEnter}
-                onMouseLeave={this.onMouseLeave}
-            >
-                {image}
-            </div>
-        )
+
     }
 }
