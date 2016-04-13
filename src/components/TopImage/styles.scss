@@ -1,56 +1,57 @@
 @import '../../sass/screens';
 
 :local(.styles) {
-  position: relative;
-
-  background: #fff;
-  background-size: 100% auto;
-
-  &>div.container{
-    height: 800px;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
     position: relative;
-    display: block;
-    background-size: cover;
-  }
 
+    background: #fff;
+    background-size: 100% auto;
 
+    .row {
+        margin-top: 200px;
+    }
 
-  .bg-shade {
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     background: rgba(255, 131, 50, 0.90);
-     top: 0;
-   }
+    & > div.container {
+        height: 800px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        display: block;
+        background-size: cover;
+    }
 
+    .bg-shade {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 131, 50, 0.90);
+        top: 0;
+    }
 
-  @media (min-width: 768px) and (max-width: 992px) {
-    height: 340px;
-  }
+    @media (min-width: 768px) and (max-width: 992px) {
+        height: 340px;
+    }
 
-  @media (#{ $phone }) {
-    height: 320px;
-  }
+    @media (#{ $phone }) {
+        height: 320px;
+    }
 
-  p.small-title{
-      margin-top: 20;
-  }
+    p.small-title {
+        margin-top: 20px;
+    }
 
-  h1.title {
-    color: #4a4a4a;
-    font-size: 60px;
-    margin-top: 250px;
-    margin-bottom: 120px;
-    font-weight: 600;
-    line-height: 120%;
-    letter-spacing:-1px;
-    font-family:'campton'
-  }
+    h1.title {
+        color: #4a4a4a;
+        font-size: 60px;
+        margin-top: 250px;
+        margin-bottom: 120px;
+        font-weight: 600;
+        line-height: 120%;
+        letter-spacing: -1px;
+        font-family: 'campton'
+    }
 
-  p {
-    color: #fff;
-  }
+    p {
+        color: #fff;
+    }
 }
