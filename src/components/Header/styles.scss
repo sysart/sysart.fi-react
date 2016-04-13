@@ -3,17 +3,13 @@
 :local(.styles) {
     position: fixed;
     z-index: 1;
-
     width: 100%;
-
     padding: 20px 0;
     opacity: 1;
-
     background: #fff;
-
     box-shadow: 0 0 32px rgba(0,0,0,.15);
 
-    .mobile-menu-toggler i{
+    .mobile-menu-toggler i {
         color: #4A4A4A;
         height: 50px;
         width: 60px;
@@ -21,6 +17,8 @@
         text-align: center;
         font-size: 35px;
         position: absolute;
+        top: 20px;
+        right:0;
         z-index: 1;
 
     }
@@ -43,7 +41,7 @@
             font-weight: bold;
         }
         @media (#{$phone}) {
-            padding-left: 60px;
+            padding-right: 60px;
         }
     }
 
@@ -69,7 +67,6 @@
         }
 
         a {
-            //margin-right: 45px;
             font-size: 18px;
             font-weight: bold;
             text-transform: uppercase;
@@ -78,6 +75,13 @@
             &.active {
                 font-weight: bold;
                 color: #f7944d;
+            }
+            @media (#{$phone}) {
+            padding-right: 60px;
+            width: 100%;
+            &:first-of-type{
+                padding-top: 30px;
+            }
             }
         }
 

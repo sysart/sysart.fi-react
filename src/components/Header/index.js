@@ -35,17 +35,17 @@ export class Header extends Component {
                 <div className="container">
                     <div className="row">
 
-                        <div className="visible-xs-block mobile-menu-toggler">
-                            <i onClick={this.toggleMobileMenu} className="fa fa-bars"></i>
-                        </div>
-
                         <div className="col-xs-12 col-sm-2 col-md-3 col-lg-3 logo">
                             <Link to="/">
                                 <img src={sysartLogo}/>
                             </Link>
                         </div>
 
-                        <div className="col-xs-12 col-sm-10 col-md-9 col-lg-9">
+                        <div className="visible-xs-block mobile-menu-toggler">
+                            <i onClick={this.toggleMobileMenu} className="fa fa-bars"></i>
+                        </div>
+
+                        <div className="col-xs-12 col-sm-10 col-md-9 col-lg-9 mobile-nav">
                             <nav className={navClass}>
                                 <Link to="/palvelut" activeClassName="active">
                                     Palvelut
