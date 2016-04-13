@@ -8,7 +8,7 @@ const WpTitle = ({title, published}) => {
         <div className={styles}>
 			<div className="container">
 				<div className="row">
-					<div className="col-md-10 col-md-offset-1">
+					<div className="col-md-8 col-md-offset-2 text-center">
                         <div className="publish-date">{published}</div>
 						<h2>{title}</h2>
 					</div>

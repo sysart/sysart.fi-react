@@ -82,9 +82,10 @@ export class TopImage extends Component {
                             >
                                 <h1 style={textColor} className="title">
                                     {title}
+                                    { cta }
                                 </h1>
 
-                                { cta }
+                                
                             </LoadingOrderAnimation>
 
                         </div>

@@ -43,8 +43,8 @@
     h1.title {
         color: #4a4a4a;
         font-size: 60px;
-        margin-top: 250px;
-        margin-bottom: 120px;
+        margin-top: 150px;
+        margin-bottom: 150px;
         font-weight: 600;
         line-height: 120%;
         letter-spacing: -1px;
@@ -58,6 +58,7 @@
     // CALL TO ACTION
 
     .cta{
+      padding-top: 30px;
         .cta-button{
             color: white;
             background: #EA5A0A;
