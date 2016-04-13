@@ -20,7 +20,8 @@ import { styles } from './styles.scss';
 /* Component */
 @connect(
     state => ({
-        jobs: state.jobs
+        jobs: state.jobs,
+        page_content: state.jobs.jobPage
     }),
     dispatch => bindActionCreators(actionCreators, dispatch)
 )
@@ -51,7 +52,7 @@ export class JobsPage extends Component {
 
 
         const { jobItems } = this.props.jobs;
-
+        const { page_content } = this.props;
 
 
         return (
@@ -59,6 +60,23 @@ export class JobsPage extends Component {
 
 
                 <div className="container">
+                    <div className="row">
+                        <div className="col-md-10 col-md-offset-1">
+                            <h1>
+                                { page_content.title }
+                            </h1>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-md-6 col-md-offset-1" dangerouslySetInnerHTML={{__html:page_content.content}}></div>
+
+                        <div className="col-md-4">
+                            <img src={ page_content.image} />
+                        </div>
+                    </div>
+
+
     				<div className="row">
     					<div className="col-md-10 col-md-offset-1">
                             <h1>
