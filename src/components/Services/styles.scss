@@ -2,6 +2,7 @@
 :local(.styles) {
 
   .service-item {
+    transition: box-shadow 1s;
     @media (#{ $desktop }) {
       min-height: 500px;
     }
@@ -10,6 +11,7 @@
       @media (#{ $desktop }) {
         box-shadow: 9px 8px 20px rgba(0, 0, 0, 0.08);
         min-height: 500px;
+        transition: box-shadow .3s;
       }
     }
   }
