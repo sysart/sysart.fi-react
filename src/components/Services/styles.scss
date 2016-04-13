@@ -1,40 +1,53 @@
 @import '../../sass/screens';
 :local(.styles) {
 
-   .image-wrapper {
-       height: 260px;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-   }
+  .service-item {
+    @media (#{ $desktop }) {
+      min-height: 500px;
+    }
 
-   .image-wrapper img {
-       flex: 0;
-       height: 60%;
-       width: auto;
-   }
+    &:hover {
+      @media (#{ $desktop }) {
+        box-shadow: 9px 8px 20px rgba(0, 0, 0, 0.08);
+        min-height: 500px;
+      }
+    }
+  }
 
-   h4 {
-       font-family: 'campton';
-       text-transform: uppercase;
-       font-weight: 700;
-       color: #4a4a4a;
-       font-size: 24px;
-   }
+  .image-wrapper {
+     height: 260px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+
+  .image-wrapper img {
+     flex: 0;
+     height: 60%;
+     width: auto;
+  }
+
+  h4 {
+    font-family: 'campton';
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #4a4a4a;
+    font-size: 24px;
+  }
 
 
-   p {
-       font-family: 'campton';
-       font-size: 20px;
-       font-weight: 200;
-       line-height: 1.6;
-       color: #4a4a4a;
-       width: 80%;
-       margin: auto;
+  p {
+    font-family: 'campton';
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1.6;
+    color: #4a4a4a;
+    width: 80%;
+    margin: auto;
 
-       @media (#{ $phone }) {
-        width: 100%;
-       }
-   }
+    @media (#{ $phone }) {
+    width: 100%;
+    }
+  }
 
 }
