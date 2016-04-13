@@ -1,4 +1,4 @@
-
+@import '../../sass/screens';
 :local(.styles) {
 
    .image-wrapper {
@@ -22,12 +22,19 @@
        font-size: 24px;
    }
 
+
    p {
        font-family: 'campton';
        font-size: 20px;
        font-weight: 200;
        line-height: 1.6;
-       margin-top: 0.8em;
        color: #4a4a4a;
+       width: 80%;
+       margin: auto;
+
+       @media (#{ $phone }) {
+        width: 100%;
+       }
    }
+
 }
