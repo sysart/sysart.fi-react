@@ -80,12 +80,10 @@ export class TopImage extends Component {
                                                    speed={700}
                                                    wait={700}
                             >
-                                <h1 style={textColor} className="title">
-                                    {title}
-                                    { cta }
-                                </h1>
+                                <h1 style={textColor} className="title" dangerouslySetInnerHTML={{__html:title}}></h1>
+                                { cta }
 
-                                
+
                             </LoadingOrderAnimation>
 
                         </div>
