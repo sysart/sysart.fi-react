@@ -46,7 +46,7 @@ export class Header extends Component {
                         </div>
 
                         <div className="col-xs-12 col-sm-10 col-md-9 col-lg-9 mobile-nav">
-                            <nav className={navClass}>
+                            <nav className={navClass} onClick={this.toggleMobileMenu}>
                                 <Link to="/palvelut" activeClassName="active">
                                     Palvelut
                                 </Link>
