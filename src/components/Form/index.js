@@ -94,21 +94,24 @@ export class Form extends React.Component{
                                         }
 
                                         return (
-                                            <input
-                                                key={key}
-                                                placeholder={field.label}
-                                                onChange={this.onFieldChange.bind(this, field)}
-                                                value={value}
-                                                type={field.type}
-                                            />
+                                            <div className="col-xs-12 col-sm-6 input-wrap text-right-not-xs">
+                                                <input
+                                                    key={key}
+                                                    placeholder={field.label}
+                                                    onChange={this.onFieldChange.bind(this, field)}
+                                                    value={value}
+                                                    type={field.type}
+                                                />
+                                            </div>
                                         )
                                     })
                                 }
 
-
-                                <button className="submit" onClick={this.sendForm}>
-                                    { _form.button.text} <i className="fa fa-arrow-right"></i>
-                                </button>
+                                <div className="col-xs-12 col-sm-6 button-wrap text-left-not-xs">
+                                    <button className="submit" onClick={this.sendForm}>
+                                        { _form.button.text} <i className="fa fa-arrow-right"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
