@@ -9,10 +9,10 @@
     .row {
       @media (#{ $tablet }) {
         margin-top: 100px;
-      } 
+      }
       @media (#{ $desktop }) {
         margin-top: 200px;
-      } 
+      }
     }
 
     & > div.container {
@@ -65,10 +65,11 @@
     // CALL TO ACTION
 
     .cta{
-      padding-top: 40px;
+      padding-top: 80px;
       margin-bottom: 150px;
         .cta-button{
             color: white;
+            font-family: 'campton';
             background: #EA5A0A;
             border: none;
             white-space: nowrap;
