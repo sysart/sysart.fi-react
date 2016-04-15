@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import moment from 'moment';
 import { Link } from 'react-router';
+import ExecutionEnvironment from 'fbjs/lib/ExecutionEnvironment';
 
 export class CustomerLogo extends Component {
 
@@ -8,7 +9,8 @@ export class CustomerLogo extends Component {
         super(props, context);
 
         this.state = {
-            hover: false
+            hover: false,
+            mobile: false
         }
     }
 
@@ -24,6 +26,31 @@ export class CustomerLogo extends Component {
         });
     };
 
+    handleResize = () =>{
+
+       if(this.state.mobile && window.innerWidth > 640){
+           this.setState({
+               mobile:false
+           });
+       }else if(!this.state.mobile && window.innerWidth <= 640){
+           this.setState({
+               mobile:true
+           });
+       }
+   };
+
+   componentDidMount(){
+       if(ExecutionEnvironment.canUseDOM){
+           this.handleResize();
+           // Add eventListener
+           window.addEventListener('resize', this.handleResize);
+       }
+   }
+
+   componentWillUnmount() {
+       window.removeEventListener('resize', this.handleResize);
+   }
+
     render() {
         const { logo, logo_hover, slug, link_reference } = this.props.item;
         console.log('Customer logo', this.props);
@@ -32,7 +59,7 @@ export class CustomerLogo extends Component {
             <img src={logo} />
         );
 
-        if(this.state.hover){
+        if(this.state.hover || this.state.mobile){
             if(logo_hover){
                 image = (<img src={logo_hover} />)
             }
