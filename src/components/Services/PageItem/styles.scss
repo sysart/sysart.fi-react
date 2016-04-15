@@ -12,15 +12,16 @@
 
         display: flex;
         justify-content: center;
+        flex-flow: row wrap;
 
         .icon{
-            margin-top:10;
-            margin-left: 30;
-            margin-right:30;
+            padding: 10px;
             text-align: center;
             img{
                 width: 50px;
-
+            }
+            p {
+                text-align: center;
             }
         }
 
