@@ -20,7 +20,7 @@ export class Footer extends Component {
                     <p>040 123 1234</p>
 
                     <h4>Oulu</h4>
-                    <p>Itämerenkatu 5, 00180, Helsinki</p>
+                    <p>Yrttipellontie 1B, 90230, Oulu</p>
                     <p>040 123 1234</p>
 
                     <h4>Asiakaspalvelu sopimusasiakkaille</h4>
