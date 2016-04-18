@@ -49,6 +49,7 @@ export class BlogPage extends Component {
                         image={content.featured_image }
                         title={''}
                         smallTitle={''}
+                        type="blogi"
                     />
 
 
