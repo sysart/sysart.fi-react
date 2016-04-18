@@ -48,11 +48,12 @@
     h1.title {
       color: #4a4a4a;
       font-size: 60px;
-      margin-top: 150px;
+      margin-top: 0px;
       font-weight: 600;
       line-height: 120%;
       letter-spacing: -1px;
       font-family: 'campton';
+      max-width: 1024px;
       @media (#{ $phone }) {
         font-size: 30px;
       }
@@ -68,10 +69,10 @@
       padding-top: 80px;
       margin-bottom: 150px;
         .cta-button{
-            color: white;
+            color: #EA5A0A;
             font-family: 'campton';
-            background: #EA5A0A;
-            border: none;
+            background: #ffffff;
+            border: 4px solid #EA5A0A;
             white-space: nowrap;
             font-size: 20px;
             text-transform: uppercase;

@@ -60,19 +60,17 @@ export class JobsPage extends Component {
 
 
                 <div className="container">
+                    
                     <div className="row">
-                        <div className="col-md-10 col-md-offset-1">
-                            <h1>
-                                { page_content.title }
-                            </h1>
+                        <div className="col-md-6 col-md-offset-1" >
+                          <h1>
+                            { page_content.title }
+                          </h1>
+                          <div dangerouslySetInnerHTML={{__html:page_content.content}}></div>
                         </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-md-6 col-md-offset-1" dangerouslySetInnerHTML={{__html:page_content.content}}></div>
 
                         <div className="col-md-4">
-                            <img src={ page_content.image} />
+                            <img className="content-image" src={ page_content.image} />
                         </div>
                     </div>
 
