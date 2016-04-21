@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+    import React, { Component } from 'react';
 import LoadingOrderAnimation from 'react-loading-order-with-animation';
 
 /* utils */
@@ -28,7 +28,7 @@ export class TopImage extends Component {
     render() {
 
 
-        const { smallTitle, title } = this.props;
+        const { smallTitle, title, type } = this.props;
 
         let inlineStyle = {};
         let textColor = {};
@@ -57,6 +57,21 @@ export class TopImage extends Component {
                 </div>
             )
         }
+        let genreIcon;
+        //Blogin kuva
+        if(this.props.type){
+
+            let genre = {
+                backgroundImage : `url(${this.props.image})`
+            };
+
+            const laptop = require('images/laptop.png');
+            genreIcon = (
+                <div className="genre-icon" style={genre}>
+                    <img src={laptop}/>
+                </div>
+            )
+        }
 
         return (
             <section className={`${styles}`}  ref="parallax">
@@ -82,6 +97,7 @@ export class TopImage extends Component {
                             >
                                 <h1 style={textColor} className="title" dangerouslySetInnerHTML={{__html:title}}></h1>
                                 { cta }
+                                { genreIcon }
 
 
                             </LoadingOrderAnimation>

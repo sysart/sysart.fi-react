@@ -26,7 +26,7 @@ export class Posts extends Component {
     }
 
     onClick = () => {
-        
+
     }
 
     render() {
@@ -36,7 +36,7 @@ export class Posts extends Component {
             <section className={`${styles}`}>
               <div className="container">
                 <div className="row">
-                    <h1>What's up?</h1>
+                    <h1>Ajankohtaista</h1>
                 </div>
                 <div className="row">
                     {items.map((postItem, index) => <PostItem onClick={this.onClick} key={index} item={postItem} />)}

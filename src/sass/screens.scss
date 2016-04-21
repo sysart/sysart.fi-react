@@ -32,6 +32,11 @@ $desktop: "min-width: 992px";
 $large-desktop: "min-width: 1366px";
 
 
+// Paddings for header
+body {
+  padding-top: 90px;
+}
+
 
 .text-left-not-xs, .text-left-not-sm, .text-left-not-md, .text-left-not-lg {
     text-align: left;
@@ -83,6 +88,7 @@ $large-desktop: "min-width: 1366px";
 @media (min-width: 992px) and (max-width: 1199px) {
     .text-left-not-md, .text-center-not-md, .text-right-not-md, .text-justify-not-md {
         text-align: inherit;
+        padding-bottom: 100px;
     }
     .text-left-md {
         text-align: left;

@@ -9,6 +9,7 @@
 :global(body) {
   position: relative;
 
+
   @media (#{$large-desktop}) {
      .container{
          width: 1366px;
