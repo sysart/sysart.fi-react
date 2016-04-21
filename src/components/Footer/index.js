@@ -16,12 +16,12 @@ export class Footer extends Component {
             <div className="col-xs-12 col-sm-4">
                 <div className="col-xs-12 col-md-10 col-md-offset-1">
                     <h4>Helsinki</h4>
-                    <p>Itämerenkatu 5, 00180, Helsinki</p>
-                    <p>040 123 1234</p>
+                    <p>Itämerenkatu 5</p>
+                    <p>00180, Helsinki</p>
 
                     <h4>Oulu</h4>
-                    <p>Itämerenkatu 5, 00180, Helsinki</p>
-                    <p>040 123 1234</p>
+                    <p>Yrttipellontie 1 D</p>
+                    <p>90230, Oulu</p>
 
                     <h4>Asiakaspalvelu sopimusasiakkaille</h4>
                     <p>+358 123 1321</p>
