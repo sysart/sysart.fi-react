@@ -32,6 +32,11 @@ $desktop: "min-width: 992px";
 $large-desktop: "min-width: 1366px";
 
 
+// Paddings for header
+body {
+  padding-top: 90px;
+}
+
 
 .text-left-not-xs, .text-left-not-sm, .text-left-not-md, .text-left-not-lg {
     text-align: left;

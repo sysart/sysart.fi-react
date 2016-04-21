@@ -1,6 +1,9 @@
 :local(.styles){
-    padding-top: 200px;
-    padding-bottom: 50px;
+
+    .container {
+        padding: 50px 0;
+    }
+    
 
     .published {
         text-align: left;

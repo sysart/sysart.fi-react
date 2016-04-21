@@ -6,14 +6,6 @@
     background: #fff;
     background-size: 100% auto;
 
-    .row {
-      @media (#{ $tablet }) {
-        margin-top: 100px;
-      }
-      @media (#{ $desktop }) {
-        margin-top: 200px;
-      }
-    }
 
     & > div.container {
         height: 800px;
