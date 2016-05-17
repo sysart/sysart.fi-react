@@ -6,6 +6,10 @@
     background: #fff;
     background-size: 100% auto;
 
+    .from-bottom-to-top {
+      top: 50px;
+    }
+
 
     & > div.container {
         height: initial;
@@ -25,6 +29,7 @@
         top: 0;
     }
 
+
 /*     @media (min-width: 768px) and (max-width: 992px) {
         height: 340px;
     }
@@ -32,6 +37,7 @@
     @media (#{ $phone }) {
         height: 320px;
     } */
+
 
     p.small-title {
         margin-top: 200px;
